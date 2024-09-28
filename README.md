@@ -1,7 +1,5 @@
 # Optimizing Autonomous Driving Datasets: Complexity, Quality, Uncertainty
 
-The imagesets and annotations files can be downloaded here:
-
 <!-- | Dataset | Download | Frame | Car | Truck | Trailer | Bus | Total. |
 | ------- | ----- | ------ | --- | ----- | --- | --- | ------ |
 | [nuScenes](https://www.nuscenes.org/)| [original](https://www.nuscenes.org/) | 28130  | 413318 | 72815 | 20701 | 13163 | 519997 |
@@ -21,22 +19,6 @@ The imagesets and annotations files can be downloaded here:
 | ------- | ----- | ------ | --- | ----- | --- | ------ | 
 | [CADC](http://cadcd.uwaterloo.ca/) | [original](https://github.com/mpitropov/OpenPCDet) | 5600 | 80425 | 4358 | 29347 | 114130 | 
 | [CADC](http://cadcd.uwaterloo.ca/) | [optimized]() | 3996 | 63069 | 3305 | 21801 | 88175 |  -->
-
-
-| **Dataset** | Download | Frame | Car | Truck | Trailer | Bus | Total. |
-|:--------|:------|:-------|:----|:------|:----|:----|:-------|
-| [nuScenes](https://www.nuscenes.org/)| [original](https://www.nuscenes.org/) | 28130  | 413318 | 72815 | 20701 | 13163 | 519997 |
-| [nuScenes](https://www.nuscenes.org/)| [optimized]() | 21518  | 307059 | 56557 | 16798 | 9305 | 389710 |
-| **Dataset** | **Download** | **Frame** | **Car** | **Truck** | **Van** | **Bus** | **Total.** |
-| [SUSCape](https://suscape.net/home) | [original](https://suscape.net/home) | 14709 | 153114 | 24828 | 15517 | 11269 | 203728 |
-| [SUSCape](https://suscape.net/home) | [optimized]() | 14709 | 153114 | 24828 | 15517 | 11269 | 203728 | 
-| **Dataset** | **Download** | **Frame** | **Car** | **Pedes.** | **Cyclist** | **Van** | **Total.** |
-| [Carla-4Scenes](https://www.kaggle.com/datasets/ghosnp/carla-4scenes) | [original](https://www.kaggle.com/datasets/ghosnp/carla-4scenes) | 14782 | 91197 | 40516 | 23282 | 21966 | 176961 | 
-| [Carla-4Scenes](https://www.kaggle.com/datasets/ghosnp/carla-4scenes) | [optimized]() | 12002 | 81193 | 35216 | 20755 | 19852 | 157016 | 
-| **Dataset** | **Download** | **Frame** | **Car** | **Truck** | **Pedes.**| **-** | **Total.** | 
-| [CADC](http://cadcd.uwaterloo.ca/) | [original](https://github.com/mpitropov/OpenPCDet) | 5600 | 80425 | 4358 | 29347 | - | 114130 | 
-| [CADC](http://cadcd.uwaterloo.ca/) | [optimized]() | 3996 | 63069 | 3305 | 21801 | - | 88175 | 
-
 
 ## About
 
@@ -65,6 +47,23 @@ This is the project OpAdDatasets (optimizing autonomous driving datasets) based 
     <li><a href="#todo-list">Todo List</a></li>
   </ol>
 </details>
+
+The imagesets and annotations files can be downloaded here:
+
+| **Dataset** | Download | Frame | Car | Truck | Trailer | Bus | Total. |
+|:--------|:------|:-------|:----|:------|:----|:----|:-------|
+| [nuScenes](https://www.nuscenes.org/)| [original](https://www.nuscenes.org/) | 28130  | 413318 | 72815 | 20701 | 13163 | 519997 |
+| [nuScenes](https://www.nuscenes.org/)| [optimized]() | 21518  | 307059 | 56557 | 16798 | 9305 | 389710 |
+| **Dataset** | **Download** | **Frame** | **Car** | **Truck** | **Van** | **Bus** | **Total.** |
+| [SUSCape](https://suscape.net/home) | [original](https://suscape.net/home) | 14709 | 153114 | 24828 | 15517 | 11269 | 203728 |
+| [SUSCape](https://suscape.net/home) | [optimized]() | 14709 | 153114 | 24828 | 15517 | 11269 | 203728 | 
+| **Dataset** | **Download** | **Frame** | **Car** | **Pedes.** | **Cyclist** | **Van** | **Total.** |
+| [Carla-4Scenes](https://www.kaggle.com/datasets/ghosnp/carla-4scenes) | [original](https://www.kaggle.com/datasets/ghosnp/carla-4scenes) | 14782 | 91197 | 40516 | 23282 | 21966 | 176961 | 
+| [Carla-4Scenes](https://www.kaggle.com/datasets/ghosnp/carla-4scenes) | [optimized]() | 12002 | 81193 | 35216 | 20755 | 19852 | 157016 | 
+| **Dataset** | **Download** | **Frame** | **Car** | **Truck** | **Pedes.**| **-** | **Total.** | 
+| [CADC](http://cadcd.uwaterloo.ca/) | [original](https://github.com/mpitropov/OpenPCDet) | 5600 | 80425 | 4358 | 29347 | - | 114130 | 
+| [CADC](http://cadcd.uwaterloo.ca/) | [optimized]() | 3996 | 63069 | 3305 | 21801 | - | 88175 | 
+
 
 ## Getting Started
 

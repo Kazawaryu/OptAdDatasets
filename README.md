@@ -9,18 +9,18 @@ The imageset and annotations files can be downloaded here:
 | [nuScenes](https://www.nuscenes.org/)| original | 28130  | 413318 | 72815 | 20701 | 13163 | 519997 | [off-pcdet](https://github.com/open-mmlab/OpenPCDet) | [nus-s0]() |
 | [nuScenes](https://www.nuscenes.org/)| optimized | 21518  | 307059 | 56557 | 16798 | 9305 | 389710 | [off-pcdet](https://github.com/open-mmlab/OpenPCDet) | [nus-s3]() |
 
-| Dataset | Layer | Frames | Car | Truck | Van | Bus | Total. | Platform | Download |
+| Dataset | Type | Frames | Car | Truck | Van | Bus | Total. | Platform | Download |
 | ------- | ----- | ------ | --- | ----- | --- | --- | ------ | -------- | -------- |
 | [SUSCape](https://suscape.net/home) | original | 14709 | 153114 | 24828 | 15517 | 11269 | 203728 | [sus-mmdet3d](https://github.com/naurril/mmdetection3d) | [sus-s0]() |
 | [SUSCape](https://suscape.net/home) | optimized | 14709 | 153114 | 24828 | 15517 | 11269 | 203728 | [sus-mmdet3d](https://github.com/naurril/mmdetection3d) | [sus-s3]() |
 
-| Dataset | Layer | Frames | Car | Pedestrian | Cyclist | Van | Total. | Platform | Download |
+| Dataset | Type | Frames | Car | Pedestrian | Cyclist | Van | Total. | Platform | Download |
 | ------- | ----- | ------ | --- | ----- | --- | --- | ------ | -------- | -------- |
 | [Carla-4Scenes](https://suscape.net/home) | original | 14782 | 91197 | 40516 | 23282 | 21966 | 176961 | [c4s-pcdet](https://github.com/Kazawaryu/pcdet) | [sus-s0]() |
 | [Carla-4Scenes](https://suscape.net/home) | optimized | 12002 | 81193 | 35216 | 20755 | 19852 | 157016 | [c4s-pcdet](https://github.com/Kazawaryu/pcdet) | [sus-s3]() |
 
 
-| Dataset | Layer | Frames | Car | Truck | Pedestrian | Total. | Platform | Download |
+| Dataset | Type | Frames | Car | Truck | Pedestrian | Total. | Platform | Download |
 | ------- | ----- | ------ | --- | ----- | --- | ------ | -------- | -------- |
 | [CADC](http://cadcd.uwaterloo.ca/) | original | 5600 | 80425 | 4358 | 29347 | 114130 | [cadc-pcdet](https://github.com/mpitropov/OpenPCDet) | [cadc-s0]()  |
 | [CADC](http://cadcd.uwaterloo.ca/) | optimized | 3996 | 63069 | 3305 | 21801 | 88175 | [cadc-pcdet](https://github.com/mpitropov/OpenPCDet) | [cadc-s3]()  |

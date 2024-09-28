@@ -48,7 +48,7 @@ This is the project OpAdDatasets (optimizing autonomous driving datasets) based 
   </ol>
 </details>
 
-The imagesets and annotations files can be downloaded here:
+The imagesets and annotations files of the original and optimized datasets can be downloaded here:
 
 | **Dataset** | Download | Frame | Car | Truck | Trailer | Bus | Total. |
 |:--------|:------|:-------|:----|:------|:----|:----|:-------|

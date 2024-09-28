@@ -1,7 +1,7 @@
 # Optimizing Autonomous Driving Datasets: Complexity, Quality, Uncertainty
 
 ![](./Docs/figures/readme-perf.png)
-> The visualization of the performance of classic 3D perception models in autonomous driving, which are [Voxel NeXt](https://github.com/dvlab-research/VoxelNeXt), [TransFusion-L](https://github.com/XuyangBai/TransFusion), [CenterPoint](https://github.com/tianweiy/CenterPoint), and [SECOND](https://github.com/traveller59/second.pytorch?tab=readme-ov-file) retrained on the original dataset $$\mathcal{D}_{\mathcal{S}_0}$$ and optimized dataset $$\mathcal{D}_{\mathcal{S}_3}$$, respectively.
+> The visualization of the performance of classic 3D perception models in autonomous driving, which are [Voxel NeXt](https://github.com/dvlab-research/VoxelNeXt), [TransFusion-L](https://github.com/XuyangBai/TransFusion), [CenterPoint](https://github.com/tianweiy/CenterPoint), and [SECOND](https://github.com/traveller59/second.pytorch?tab=readme-ov-file) retrained on the original dataset $D_{S_0}$ and optimized dataset $D_{S_3}$, respectively.
 
 <!-- need a logo or a figure here -->
 

@@ -1,10 +1,7 @@
 # Optimizing Autonomous Driving Datasets: Complexity, Quality, Uncertainty
 
-![](./Docs/figures/readme-perf.png)
-> The visualization of the performance of classic 3D perception models in autonomous driving, which are [Voxel NeXt](https://github.com/dvlab-research/VoxelNeXt), [TransFusion-L](https://github.com/XuyangBai/TransFusion), [CenterPoint](https://github.com/tianweiy/CenterPoint), and [SECOND](https://github.com/traveller59/second.pytorch?tab=readme-ov-file) retrained on the original dataset $D_{S_0}$ and optimized dataset $D_{S_3}$, respectively.
-
-<!-- need a logo or a figure here -->
-
+![](./Docs/figures/readme-dataset-dom.png)
+> **Left**: the average training gain (nuScenes detection score per frame) of the retrained perception algorithms by the original and optimized nuScenes, which are tested on the validation set of the original nuScenes. **Right**: the Pareto front of the retrained perception algorithms by the original dataset ($D_{S_0}$) and the optimized datasets at each layer ($D_{S_1}, D_{S_2}, D_{S_3}$) of our method from training time and average training gain per frame. The retrained algorithms by $D_{S_3}$ dominate the others.
 
 <details>
   <summary>Table of Contents</summary>
@@ -25,6 +22,8 @@
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
+    <li><a href="#citation">Citation</a></li>
+    <li><a href="#todo-list">Todo List</a></li>
   </ol>
 </details>
 
@@ -44,17 +43,60 @@ This is the project OpAdDatasets (optimizing autonomous driving datasets) based 
 
 ### Installation
 
-#### CARLA Simulator
+To start from data collecting, follow the full steps. If only the open source dataset is used, skip the two optional steps. 
 
-#### 
+#### CARLA Simulator (optional)
+
+Choose one of the two CARLA versions to install, the official version is recommended.
+1. Download the official [CARLA version](https://github.com/carla-simulator/carla/releases/tag/0.9.15/), and following the official installation [tutorial](https://carla.readthedocs.io/en/0.9.15/start_quickstart/).
+2. Download the specified [CARLA version](http://gofile.me/6MDrn/UOvykgikS). The newest version is here ([BaiduCloud](https://pan.baidu.com/share/init?surl=iLcAsa1yJSYNcisP1ymfow&pwd=b5au) | [GoogleDrive](https://drive.google.com/file/d/1kHZM-gMMSq9b4UvzKXK5PkzfXLoXZmkx/view)).
+
+
+#### Active Data Collecting Tool (optional)
+
+1. Clone the collecting tool
+    ``` shell
+    mkdir ./collecting_tool & cd ./collecting_tool
+    git clone https://github.com/Kazawaryu/CARLA_ADA
+    ```
+
+2. Create environment
+    ``` shell
+    conda create -n OptAdDatasets python=3.8 & conda activate OptAdDatasets
+    pip3 install -r requirements.txt
+    ```
+
+#### Data optimization Tool
+
+#### Training Platform
 
 ## Usage
 
 ## Model Zoo
 
+![](./Docs/figures/readme-model-perf.png)
+> The visualization of the performance of classic 3D perception models in autonomous driving, which are [Voxel NeXt](https://github.com/dvlab-research/VoxelNeXt), [TransFusion-L](https://github.com/XuyangBai/TransFusion), [CenterPoint](https://github.com/tianweiy/CenterPoint), and [SECOND](https://github.com/traveller59/second.pytorch?tab=readme-ov-file) retrained on the original dataset $D_{S_0}$ and optimized dataset $D_{S_3}$, respectively.
+
 ## Contribution
+<a href="https://github.com/Kazawaryu/OptAdDatasets/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Kazawaryu/OptAdDatasets" />
+</a>
 
 ## Acknowledgments
+- [CARLA Simulator](https://carla.org/)
+- [CARLA Ros Bridge](https://github.com/carla-simulator/ros-bridge)
+- [CARLA_INVS](https://github.com/zijianzhang/CARLA_INVS)
+- [OpenPCDet]()
+- [MMDetection3D]()
+
+## Citation
+``` bib
+comming soon
 ```
-Coming soon
-```
+
+## Todo List
+
+- [ ] Readme
+- [ ] Collecting tools
+- [ ] Optimization tools
+- [ ] Training tools

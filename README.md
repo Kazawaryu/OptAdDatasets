@@ -23,7 +23,7 @@ The imagesets and annotations files can be downloaded here:
 | [CADC](http://cadcd.uwaterloo.ca/) | [optimized]() | 3996 | 63069 | 3305 | 21801 | 88175 |  -->
 
 
-| Dataset | Download | Frame | Car | Truck | Trailer | Bus | Total. |
+| **Dataset** | Download | Frame | Car | Truck | Trailer | Bus | Total. |
 | ------- | ----- | ------ | --- | ----- | --- | --- | ------ |
 | [nuScenes](https://www.nuscenes.org/)| [original](https://www.nuscenes.org/) | 28130  | 413318 | 72815 | 20701 | 13163 | 519997 |
 | [nuScenes](https://www.nuscenes.org/)| [optimized]() | 21518  | 307059 | 56557 | 16798 | 9305 | 389710 |

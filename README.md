@@ -1,9 +1,29 @@
 # Optimizing Autonomous Driving Datasets: Complexity, Quality, Uncertainty
 
-![](./Docs/figures/readme-dataset-dom.png)
+## Conclusion
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
-> **Left**: the average training gain (nuScenes detection score per frame) of the retrained perception algorithms by the original and optimized nuScenes, which are tested on the validation set of the original nuScenes. **Right**: the Pareto front of the retrained perception algorithms by the original dataset ($D_{S_0}$) and the optimized datasets at each layer ($D_{S_1}, D_{S_2}, D_{S_3}$) of our method from training time and average training gain per frame. The retrained algorithms by $D_{S_3}$ dominate the others.
+The imageset and annotations files can be downloaded here:
+| Dataset | Type | Frames | Car | Truck | Trailer | Bus | Total. | Platform | Download |
+| ------- | ----- | ------ | --- | ----- | --- | --- | ------ | -------- | -------- |
+| [nuScenes](https://www.nuscenes.org/)| original | 28130  | 413318 | 72815 | 20701 | 13163 | 519997 | [off-pcdet](https://github.com/open-mmlab/OpenPCDet) | [nus-s0]() |
+| [nuScenes](https://www.nuscenes.org/)| optimized | 21518  | 307059 | 56557 | 16798 | 9305 | 389710 | [off-pcdet](https://github.com/open-mmlab/OpenPCDet) | [nus-s3]() |
 
+| Dataset | Layer | Frames | Car | Truck | Van | Bus | Total. | Platform | Download |
+| ------- | ----- | ------ | --- | ----- | --- | --- | ------ | -------- | -------- |
+| [SUSCape](https://suscape.net/home) | original | 14709 | 153114 | 24828 | 15517 | 11269 | 203728 | [sus-mmdet3d](https://github.com/naurril/mmdetection3d) | [sus-s0]() |
+| [SUSCape](https://suscape.net/home) | optimized | 14709 | 153114 | 24828 | 15517 | 11269 | 203728 | [sus-mmdet3d](https://github.com/naurril/mmdetection3d) | [sus-s3]() |
+
+| Dataset | Layer | Frames | Car | Pedestrian | Cyclist | Van | Total. | Platform | Download |
+| ------- | ----- | ------ | --- | ----- | --- | --- | ------ | -------- | -------- |
+| [Carla-4Scenes](https://suscape.net/home) | original | 14782 | 91197 | 40516 | 23282 | 21966 | 176961 | [c4s-pcdet](https://github.com/Kazawaryu/pcdet) | [sus-s0]() |
+| [Carla-4Scenes](https://suscape.net/home) | optimized | 12002 | 81193 | 35216 | 20755 | 19852 | 157016 | [c4s-pcdet](https://github.com/Kazawaryu/pcdet) | [sus-s3]() |
+
+
+| Dataset | Layer | Frames | Car | Truck | Pedestrian | Total. | Platform | Download |
+| ------- | ----- | ------ | --- | ----- | --- | ------ | -------- | -------- |
+| [CADC](http://cadcd.uwaterloo.ca/) | original | 5600 | 80425 | 4358 | 29347 | 114130 | [cadc-pcdet](https://github.com/mpitropov/OpenPCDet) | [cadc-s0]()  |
+| [CADC](http://cadcd.uwaterloo.ca/) | optimized | 3996 | 63069 | 3305 | 21801 | 88175 | [cadc-pcdet](https://github.com/mpitropov/OpenPCDet) | [cadc-s3]()  |
 <details>
   <summary>Table of Contents</summary>
   <ol>
@@ -18,7 +38,7 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#zoo">Zoo</a></li>
+    <li><a href="#visualization">Visualization</a></li>
     <li><a href="#contribution">Contribution</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -27,6 +47,8 @@
     <li><a href="#todo-list">Todo List</a></li>
   </ol>
 </details>
+
+
 
 ## About
 
@@ -121,14 +143,12 @@ pip install -v -e .
 
 ### Traning Models
 
-## Zoo
+## Visualization
+![](./Docs/figures/readme-dataset-dom.png)
 
-### Dataset Zoo
-
-### Model Zoo
+> **Left**: the average training gain (nuScenes detection score per frame) of the retrained perception algorithms by the original and optimized nuScenes, which are tested on the validation set of the original nuScenes. **Right**: the Pareto front of the retrained perception algorithms by the original dataset ($D_{S_0}$) and the optimized datasets at each layer ($D_{S_1}, D_{S_2}, D_{S_3}$) of our method from training time and average training gain per frame. The retrained algorithms by $D_{S_3}$ dominate the others.
 
 ![](./Docs/figures/readme-model-perf.png)
-
 > The visualization of the performance of classic 3D perception models in autonomous driving, which are [Voxel NeXt](https://github.com/dvlab-research/VoxelNeXt), [TransFusion-L](https://github.com/XuyangBai/TransFusion), [CenterPoint](https://github.com/tianweiy/CenterPoint), and [SECOND](https://github.com/traveller59/second.pytorch?tab=readme-ov-file) retrained on the original dataset $D_{S_0}$ and optimized dataset $D_{S_3}$, respectively.
 
 ## Contribution

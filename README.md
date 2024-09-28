@@ -1,29 +1,31 @@
 # Optimizing Autonomous Driving Datasets: Complexity, Quality, Uncertainty
 
-## Conclusion
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+The imagesets and annotations files can be downloaded here:
 
-The imageset and annotations files can be downloaded here:
-| Dataset | Type | Frame | Car | Truck | Trailer | Bus | Total. | Tools | Annos. |
-| ------- | ----- | ------ | --- | ----- | --- | --- | ------ | -------- | -------- |
-| [nuScenes](https://www.nuscenes.org/)| original | 28130  | 413318 | 72815 | 20701 | 13163 | 519997 | [pcdet](https://github.com/open-mmlab/OpenPCDet) | [nus-s0]() |
-| [nuScenes](https://www.nuscenes.org/)| optimized | 21518  | 307059 | 56557 | 16798 | 9305 | 389710 | [pcdet](https://github.com/open-mmlab/OpenPCDet) | [nus-s3]() |
+| Dataset | Download | Frame | Car | Truck | Trailer | Bus | Total. |
+| ------- | ----- | ------ | --- | ----- | --- | --- | ------ |
+| [nuScenes](https://www.nuscenes.org/)| [original](https://www.nuscenes.org/) | 28130  | 413318 | 72815 | 20701 | 13163 | 519997 |
+| [nuScenes](https://www.nuscenes.org/)| [optimized]() | 21518  | 307059 | 56557 | 16798 | 9305 | 389710 |
 
-| Dataset | Type | Frame | Car | Truck | Van | Bus | Total. | Tools | Annos. |
-| ------- | ----- | ------ | --- | ----- | --- | --- | ------ | -------- | -------- |
-| [SUSCape](https://suscape.net/home) | original | 14709 | 153114 | 24828 | 15517 | 11269 | 203728 | [mmdet3d](https://github.com/naurril/mmdetection3d) | [sus-s0]() |
-| [SUSCape](https://suscape.net/home) | optimized | 14709 | 153114 | 24828 | 15517 | 11269 | 203728 | [mmdet3d](https://github.com/naurril/mmdetection3d) | [sus-s3]() |
+| Dataset | Download | Frame | Car | Truck | Van | Bus | Total. |
+| ------- | ----- | ------ | --- | ----- | --- | --- | ------ |
+| [SUSCape](https://suscape.net/home) | [original](https://suscape.net/home) | 14709 | 153114 | 24828 | 15517 | 11269 | 203728 |
+| [SUSCape](https://suscape.net/home) | [optimized]() | 14709 | 153114 | 24828 | 15517 | 11269 | 203728 | 
 
-| Dataset | Type | Frame | Car | Pedes. | Cyclist | Van | Total. | Tools | Annos. |
-| ------- | ----- | ------ | --- | ----- | --- | --- | ------ | -------- | -------- |
-| [Carla-4Scenes](https://www.kaggle.com/datasets/ghosnp/carla-4scenes) | original | 14782 | 91197 | 40516 | 23282 | 21966 | 176961 | [pcdet](https://github.com/Kazawaryu/pcdet) | [sus-s0]() |
-| [Carla-4Scenes](https://www.kaggle.com/datasets/ghosnp/carla-4scenes) | optimized | 12002 | 81193 | 35216 | 20755 | 19852 | 157016 | [pcdet](https://github.com/Kazawaryu/pcdet) | [sus-s3]() |
+| Dataset | Download | Frame | Car | Pedes. | Cyclist | Van | Total. |
+| ------- | ----- | ------ | --- | ----- | --- | --- | ------ |
+| [Carla-4Scenes](https://www.kaggle.com/datasets/ghosnp/carla-4scenes) | [original](https://www.kaggle.com/datasets/ghosnp/carla-4scenes) | 14782 | 91197 | 40516 | 23282 | 21966 | 176961 | 
+| [Carla-4Scenes](https://www.kaggle.com/datasets/ghosnp/carla-4scenes) | [optimized]() | 12002 | 81193 | 35216 | 20755 | 19852 | 157016 | 
 
+| Dataset | Download | Frame | Car | Truck | Pedes. | Total. | 
+| ------- | ----- | ------ | --- | ----- | --- | ------ | 
+| [CADC](http://cadcd.uwaterloo.ca/) | [original](https://github.com/mpitropov/OpenPCDet) | 5600 | 80425 | 4358 | 29347 | 114130 | 
+| [CADC](http://cadcd.uwaterloo.ca/) | [optimized]() | 3996 | 63069 | 3305 | 21801 | 88175 | 
 
-| Dataset | Type | Frame | Car | Truck | Pedes. | Total. | Tools | Annos. |
-| ------- | ----- | ------ | --- | ----- | --- | ------ | -------- | -------- |
-| [CADC](http://cadcd.uwaterloo.ca/) | original | 5600 | 80425 | 4358 | 29347 | 114130 | [pcdet](https://github.com/mpitropov/OpenPCDet) | [cadc-s0]()  |
-| [CADC](http://cadcd.uwaterloo.ca/) | optimized | 3996 | 63069 | 3305 | 21801 | 88175 | [pcdet](https://github.com/mpitropov/OpenPCDet) | [cadc-s3]()  |
+## About
+
+This is the project OpAdDatasets (optimizing autonomous driving datasets) based on complexity, quality, and uncertainty. Baes on the three features, it removes the redundant and low-quality 3D point cloud data frames to obtain a sub-dataset in smaller sizes and equivalent effectiveness.
+
 <details>
   <summary>Table of Contents</summary>
   <ol>
@@ -38,7 +40,7 @@ The imageset and annotations files can be downloaded here:
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#visualization">Visualization</a></li>
+    <li><a href="#result-visualization">Result Visualization</a></li>
     <li><a href="#contribution">Contribution</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -47,12 +49,6 @@ The imageset and annotations files can be downloaded here:
     <li><a href="#todo-list">Todo List</a></li>
   </ol>
 </details>
-
-
-
-## About
-
-This is the project OpAdDatasets (optimizing autonomous driving datasets) based on complexity, quality, and uncertainty. Baes on the three features, it removes the redundant and low-quality 3D point cloud data frames to obtain a sub-dataset in smaller sizes and equivalent effectiveness.
 
 ## Getting Started
 
@@ -138,12 +134,74 @@ pip install -v -e .
 ## Usage
 
 ### Collecting Datasets form CARLA
+1. Start CARLA
+``` shell
+cd ./collecting_tool
+cd $carla_root_directory$
+./CarlaUE4.sh
+```
+
+2. Start recoder
+``` shell
+python data_recoder.py
+# press ^C in terminal to stop data collecting
+```
+
+3. Convert raw datas into dataset
+``` shell
+python format_helper.py -s $raw_data_directory$
+```
 
 ### Optimizing Datasets
 
+- Create imagesets (for SUSCape, Carla-4Scenes, and CADC)
+``` shell
+cd ./optimizing_tool
+python optimize_imgsets.py --root_path $dataset_root$ --dataset_name $dataset_name$ --save_path $save_dir$
+```
+
+- Creare annotations (for nuScenes)
+``` shell
+cd ./optimizing_tool
+python optimize_imgsets.py --root_path $dataset_root$ --dataset_name $dataset_name$ --save_path $save_dir$
+python optimize_annos.py --root $dataset_root$ --save_path $save_dir$
+```
 ### Traning Models
 
-## Visualization
+To train the models, first clone the repositories from the following urls for different datasets.
+
+| Dataset | [nuScenes](https://www.nuscenes.org/) | [SUSCape](https://suscape.net/home) | [Carla-4Scenes](https://www.kaggle.com/datasets/ghosnp/carla-4scenes) | [CADC](http://cadcd.uwaterloo.ca/) |
+| ------- | -------- | ------- | ------------- | ---- |
+| Platform| OpenPCDet [official](https://github.com/open-mmlab/OpenPCDet) | MMDetection3D [merge](https://github.com/naurril/mmdetection3d) | OpenPCDet [merge](https://github.com/Kazawaryu/pcdet) | OpenPCDet [merge](https://github.com/mpitropov/OpenPCDet) | 
+
+
+#### OpenPCDet
+
+``` shell
+cd ./training_tool/OpenPCDet
+mv $imagesets_path/*$ $./dataset/$your_dataset_name$/imagesets$ 
+cd tools
+# single GPU
+python train.py --cfg_file $config_file_path$
+# multiple GPUs
+bash script/dist_train.sh $number_of_gpus$ --cfg_file $config_file_path$
+```
+
+#### MMDetection3D
+
+``` shell
+cd ./training_tool/mmdetection3d
+mv $annotations_path/*$ $./dataset/nuscenes/v1.0-trainval/v1.0-trainval$ 
+cd tools
+# single GPU
+python train.py --config $config_file_path$
+# multiple GPUs
+bash script/dist_train.sh $number_of_gpus$ --config $config_file_path$
+```
+
+
+
+## Result Visualization
 ![](./Docs/figures/readme-dataset-dom.png)
 
 > **Left**: the average training gain (nuScenes detection score per frame) of the retrained perception algorithms by the original and optimized nuScenes, which are tested on the validation set of the original nuScenes. **Right**: the Pareto front of the retrained perception algorithms by the original dataset ($D_{S_0}$) and the optimized datasets at each layer ($D_{S_1}, D_{S_2}, D_{S_3}$) of our method from training time and average training gain per frame. The retrained algorithms by $D_{S_3}$ dominate the others.
@@ -171,7 +229,7 @@ comming soon
 
 ## Todo List
 
-- [ ] Readme
+- [x] Readme
 - [ ] Collecting tools
 - [ ] Optimization tools
 - [ ] Training tools

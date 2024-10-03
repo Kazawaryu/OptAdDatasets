@@ -1,34 +1,21 @@
 # Optimizing Autonomous Driving Datasets: Complexity, Quality, Uncertainty
 
-<!-- | Dataset | Download | Frame | Car | Truck | Trailer | Bus | Total. |
-| ------- | ----- | ------ | --- | ----- | --- | --- | ------ |
-| [nuScenes](https://www.nuscenes.org/)| [original](https://www.nuscenes.org/) | 28130  | 413318 | 72815 | 20701 | 13163 | 519997 |
-| [nuScenes](https://www.nuscenes.org/)| [optimized]() | 21518  | 307059 | 56557 | 16798 | 9305 | 389710 |
+This project aims to optimize autonomous driving datasets by considering three key features: complexity, quality, and uncertainty. The goal is to create a smaller yet equally effective subset by removing redundant and low-quality 3D point cloud data frames.
 
-| Dataset | Download | Frame | Car | Truck | Van | Bus | Total. |
-| ------- | ----- | ------ | --- | ----- | --- | --- | ------ |
-| [SUSCape](https://suscape.net/home) | [original](https://suscape.net/home) | 14709 | 153114 | 24828 | 15517 | 11269 | 203728 |
-| [SUSCape](https://suscape.net/home) | [optimized]() | 14709 | 153114 | 24828 | 15517 | 11269 | 203728 | 
+## Key Features
 
-| Dataset | Download | Frame | Car | Pedes. | Cyclist | Van | Total. |
-| ------- | ----- | ------ | --- | ----- | --- | --- | ------ |
-| [Carla-4Scenes](https://www.kaggle.com/datasets/ghosnp/carla-4scenes) | [original](https://www.kaggle.com/datasets/ghosnp/carla-4scenes) | 14782 | 91197 | 40516 | 23282 | 21966 | 176961 | 
-| [Carla-4Scenes](https://www.kaggle.com/datasets/ghosnp/carla-4scenes) | [optimized]() | 12002 | 81193 | 35216 | 20755 | 19852 | 157016 | 
 
-| Dataset | Download | Frame | Car | Truck | Pedes. | Total. | 
-| ------- | ----- | ------ | --- | ----- | --- | ------ | 
-| [CADC](http://cadcd.uwaterloo.ca/) | [original](https://github.com/mpitropov/OpenPCDet) | 5600 | 80425 | 4358 | 29347 | 114130 | 
-| [CADC](http://cadcd.uwaterloo.ca/) | [optimized]() | 3996 | 63069 | 3305 | 21801 | 88175 |  -->
-
-## About
-
-This is the project OpAdDatasets (optimizing autonomous driving datasets) based on complexity, quality, and uncertainty. Baes on the three features, it removes the redundant and low-quality 3D point cloud data frames to obtain a sub-dataset in smaller sizes and equivalent effectiveness.
+- **Complexity Analysis**: Evaluates the complexity of each data frame, ensuring that the frames with enough instances of information are reserved.
+- **Quality Assessment**: Identifies and filters high-quality data frames, improving the overall reliability of the dataset.
+- **Uncertainty Quantification**: Considers uncertainty factors in the data, removing the frames with abnormally sensing uncertainty.
+- **Dataset Optimization**: Significantly reduces dataset size through intelligent selection while maintaining its effectiveness for autonomous driving tasks.
+- **Transferability**: The optimizing method is transferable to many datasets (supported: nuScenes, SUSCape, Carla-4Scenes, and CADC), and the optimized dataset can be used in multiple tasks such as 3D object detection and 2D object detection.
 
 <details>
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#about">About</a>
+      <a href="#optimization-results">Optimization Results</a>
     </li>
     <li>
       <a href="#getting-started">Getting Started</a>
@@ -48,10 +35,14 @@ This is the project OpAdDatasets (optimizing autonomous driving datasets) based 
   </ol>
 </details>
 
+
+## Optimization Results
+
+As shown in the table below, our approach significantly reduces the size of datasets while retaining most of the valuable information.
 The imagesets and annotations files of the original and optimized datasets can be downloaded here:
 
 | **Dataset** | Download | Frame | Car | Truck | Trailer | Bus | Total. |
-|:--------|:------|:-------|:----|:------|:----|:----|:-------|
+|:------------|:---------|:------|:----|:------|:--------|:----|:-------|
 | [nuScenes](https://www.nuscenes.org/)| [original](https://www.nuscenes.org/) | 28130 | 413318 | 72815 | 20701 | 13163 | 519997 |
 | [nuScenes](https://www.nuscenes.org/)| [optimized]() | 21518 (76.5%) | 307059 | 56557 | 16798 | 9305 | 389710 (74.9%) |
 | **Dataset** | **Download** | **Frame** | **Car** | **Truck** | **Van** | **Bus** | **Total.** |
@@ -187,7 +178,7 @@ To train the models, first clone the repositories from the following urls for di
 
 | Dataset | [nuScenes](https://www.nuscenes.org/) | [SUSCape](https://suscape.net/home) | [Carla-4Scenes](https://www.kaggle.com/datasets/ghosnp/carla-4scenes) | [CADC](http://cadcd.uwaterloo.ca/) |
 | ------- | -------- | ------- | ------------- | ---- |
-| Platform| OpenPCDet [official](https://github.com/open-mmlab/OpenPCDet) | MMDetection3D [merge](https://github.com/naurril/mmdetection3d) | OpenPCDet [merge](https://github.com/Kazawaryu/pcdet) | OpenPCDet [merge](https://github.com/mpitropov/OpenPCDet) | 
+| Platform | [OpenPCDet](https://github.com/open-mmlab/OpenPCDet) | [MMDetection3D](https://github.com/open-mmlab/mmdetection3d) | [OpenPCDet](https://github.com/open-mmlab/OpenPCDet) | [OpenPCDet](https://github.com/open-mmlab/OpenPCDet) |
 
 
 #### OpenPCDet
@@ -239,7 +230,12 @@ bash script/dist_train.sh $number_of_gpus$ --config $config_file_path$
 ## Citation
 
 ```bib
-comming soon
+@inproceedings{kazawa2024optimizing,
+  title={Optimizing Autonomous Driving Datasets: Complexity, Quality, Uncertainty},
+  author={Kazawa, Ryu},
+  booktitle={To be published},
+  year={2024}
+}
 ```
 
 ## Todo List
